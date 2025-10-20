@@ -1,0 +1,163 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #0f0f0f;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(135deg, #ff004c, #4500ff);
+    padding: 30px;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 12px 28px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ff004c;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Memberi jarak antar menu */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 14px;
+    display: inline-block;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    background-color: #ff004c;
+    color: #fff;
+}
+
+/* Style untuk menu yang sedang aktif */
+.nav-links a.active {
+    color: #ff004c;
+    font-weight: 700;
+}
+.nav-links a.active:hover {
+    background-color: #ff004c;
+    color: #fff;
+}
+
+
+/* KONTEN HALAMAN BERANDA */
+.page-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+}
+.page-content h2 {
+    color: #ff004c;
+}
+.page-content p {
+    line-height: 1.6;
+    color: #ddd;
+}
+.page-content .btn {
+    margin-top: 20px;
+}
+
+
+/* HALAMAN STREAMING */
+.channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.channel {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+
+.channel:hover {
+    transform: scale(1.05);
+}
+
+.channel img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* HALAMAN TENTANG */
+.about {
+    padding: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.about .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ff004c;
+}
+
+.about h2, .about h3 {
+    margin: 10px 0;
+}
+
+/* Tombol & Footer Universal */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff004c;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #4500ff;
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
