@@ -175,4 +175,33 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    /* Container untuk semua link */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Menyusun ke bawah */
+    gap: 10px;              /* Jarak antar baris link */
+    margin-top: 15px;
+}
+
+/* Container untuk tiap item (ikon + teks) */
+.social-item {
+    display: flex;          /* Membuat ikon dan teks sejajar ke samping */
+    align-items: center;    /* Vertikal rata tengah */
+    text-decoration: none;  /* Menghapus garis bawah link */
+    color: #333;            /* Warna teks */
+    font-size: 14px;        /* Ukuran teks link */
+}
+
+/* Ukuran ikon kecil */
+.social-icon {
+    width: 24px;            /* Atur lebar ikon */
+    height: 24px;           /* Atur tinggi ikon */
+    margin-right: 10px;     /* Jarak antara ikon dan teks link */
+    object-fit: contain;
+}
+
+.social-item:hover {
+    color: #007bff;         /* Warna berubah saat diarahkan kursor */
+}
 }
