@@ -41,7 +41,7 @@ h1 {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 15px; /* Memberi jarak antar menu */
+    gap: 15px;
 }
 
 .nav-links a {
@@ -59,18 +59,12 @@ h1 {
     color: #fff;
 }
 
-/* Style untuk menu yang sedang aktif */
 .nav-links a.active {
     color: #ff004c;
     font-weight: 700;
 }
-.nav-links a.active:hover {
-    background-color: #ff004c;
-    color: #fff;
-}
 
-
-/* KONTEN HALAMAN BERANDA */
+/* ===== CONTENT ===== */
 .page-content {
     max-width: 800px;
     margin: 40px auto;
@@ -79,19 +73,7 @@ h1 {
     background-color: #1c1c1c;
     border-radius: 15px;
 }
-.page-content h2 {
-    color: #ff004c;
-}
-.page-content p {
-    line-height: 1.6;
-    color: #ddd;
-}
-.page-content .btn {
-    margin-top: 20px;
-}
 
-
-/* HALAMAN STREAMING */
 .channels {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -103,7 +85,6 @@ h1 {
     background-color: #1c1c1c;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s;
 }
 
@@ -111,13 +92,7 @@ h1 {
     transform: scale(1.05);
 }
 
-.channel img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-}
-
-/* HALAMAN TENTANG */
+/* ===== ABOUT PAGE (TEMPAT PERBAIKAN IKON) ===== */
 .about {
     padding: 40px;
     max-width: 700px;
@@ -135,36 +110,54 @@ h1 {
     border: 3px solid #ff004c;
 }
 
-.about h2, .about h3 {
-    margin: 10px 0;
+/* Style untuk Container Sosmed - SEKARANG DI LUAR MEDIA QUERY */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center; /* Mengetengahkan ikon & teks */
 }
 
-/* Tombol & Footer Universal */
+.social-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ddd; /* Mengganti ke warna terang agar terlihat di background gelap */
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-icon {
+    width: 24px;   /* Ukuran Ikon Fixed */
+    height: 24px;  /* Ukuran Ikon Fixed */
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.social-item:hover {
+    color: #ff004c;
+}
+
+/* ===== UNIVERSAL & FOOTER ===== */
 .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff004c;
-    margin-right: 15px;
     color: white;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-
-}
-
-.btn:hover {
-    background-color: #4500ff;
 }
 
 footer {
     background-color: #111;
     padding: 20px;
-    font-size: 0.9em;
     margin-top: 40px;
 }
 
-/* Tambahan: Responsivitas untuk layar kecil (Mobile) */
+/* ===== RESPONSIVITAS (MOBILE ONLY) ===== */
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
@@ -175,33 +168,4 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    /* Container untuk semua link */
-.social-links {
-    display: flex;
-    flex-direction: column; /* Menyusun ke bawah */
-    gap: 10px;              /* Jarak antar baris link */
-    margin-top: 15px;
-}
-
-/* Container untuk tiap item (ikon + teks) */
-.social-item {
-    display: flex;          /* Membuat ikon dan teks sejajar ke samping */
-    align-items: center;    /* Vertikal rata tengah */
-    text-decoration: none;  /* Menghapus garis bawah link */
-    color: #333;            /* Warna teks */
-    font-size: 14px;        /* Ukuran teks link */
-}
-
-/* Ukuran ikon kecil */
-.social-icon {
-    width: 24px;            /* Atur lebar ikon */
-    height: 24px;           /* Atur tinggi ikon */
-    margin-right: 10px;     /* Jarak antara ikon dan teks link */
-    object-fit: contain;
-}
-
-.social-item:hover {
-    color: #007bff;         /* Warna berubah saat diarahkan kursor */
-}
 }
